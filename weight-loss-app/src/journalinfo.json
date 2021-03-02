@@ -1,0 +1,52 @@
+[
+    {
+    "id": 1,
+    "dow":"Monday",
+    "food":" ",
+    "calories": " "
+
+    },
+    {
+        "id": 2,
+        "dow":"Tuesday",
+        "food":" ",
+        "calories": " "
+    
+        },
+        {
+            "id": 3,
+            "dow":"Wednesday",
+            "food":" ",
+            "calories": " "
+        
+            },
+            {
+                "id": 4,
+                "dow":"Thursday",
+                "food":" ",
+                "calories": " "
+            
+                },
+                {
+                    "id": 5,
+                    "dow":"Friday",
+                    "food":" ",
+                    "calories": " "
+                
+                    },
+                    {
+                        "id": 6,
+                        "dow":"Saturday",
+                        "food":" ",
+                        "calories": " "
+                    
+                        },
+                        {
+                            "id": 7,
+                            "dow":"Sunday",
+                            "food":" ",
+                            "calories": " "
+                        
+                            },
+
+]
