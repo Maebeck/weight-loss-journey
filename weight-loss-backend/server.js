@@ -18,16 +18,14 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/WEIGHT_LOSS",
     useFindAndModify: false
 });
 
-const journalRouter = require('./routes/journaldata')
-const usersRouter = require('./routes/users');
-app.use('/journal', journalRouter);
-app.use('/users', usersRouter);
-app.use('/login', (req, res) => {
-    res.send({
-        token: 'test123'
-    });
-});
+const journalRouter = require('./routes/journalRoutes');
+const usersRouter = require('./routes/userRoutes');
+const mealplanRouter = require('./routes/mealplanRoutes');
 
+
+app.use('/mealplan', mealplanRouter);
+app.use('/users', usersRouter);
+app.use('/journal', journalRouter);
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });

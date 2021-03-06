@@ -37,10 +37,11 @@ const userSchema= new Schema ({
         minlength: 3, 
         maxlength: 4
     },
+    JournalInfo: [{ type: Schema.Types.ObjectId, ref: 'Journal' }],
     }, {
         timestaps: true,
+        
     });
 
     const User = mongoose.model('User', userSchema);
-
     module.exports = User;

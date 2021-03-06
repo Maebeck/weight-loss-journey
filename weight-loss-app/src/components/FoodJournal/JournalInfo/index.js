@@ -4,7 +4,7 @@ import Modal from '../JournalModals';
 class List extends Component {
   constructor(props) {
     super(props);
-
+    
     this.replaceModalItem = this.replaceModalItem.bind(this);
     this.saveModalDetails = this.saveModalDetails.bind(this);
     this.state = {
@@ -12,34 +12,34 @@ class List extends Component {
       brochure: [
         {
           dow: "Sunday",
-          food: "Food",
-          calories: "Calories"
+          food: [],
+          calories: []
         }, {
           dow: "Monday",
-          food: "Food",
-          calories: "Calories"
+          food: [],
+          calories: []
         }, {
           dow: "Tuesday",
-          food: "Food",
-          calories: "Calories"
+          food: [],
+          calories: []
         }
         , {
           dow: "Wednesday",
-          food: "Food",
-          calories: "Calories"
+          food: [],
+          calories: []
         }
         , {
           dow: "Thursday",
-          food: "Food",
-          calories: "Calories"
+          food: [],
+          calories: []
         }, {
           dow: "Friday",
-          food: "Food",
-          calories: "Calories"
+          food: [],
+          calories: []
         }, {
           dow: "Saturday",
-          food: "Food",
-          calories: "Calories"
+          food: [],
+          calories: []
         }
       ]
     }
@@ -54,13 +54,17 @@ class List extends Component {
   saveModalDetails(item) {
     const requiredItem = this.state.requiredItem;
     let tempbrochure = this.state.brochure;
-    tempbrochure[requiredItem] = item;
+    tempbrochure[requiredItem] = {...tempbrochure[requiredItem], ...item};
     this.setState({ brochure: tempbrochure });
-  }
+  } 
 
   deleteItem(item) {
     let tempBrochure = this.state.brochure;
-    tempBrochure.splice(item.calories, item.food, 1);
+    tempBrochure.splice(item, 1,  {
+      dow: tempBrochure[item].dow,
+      food: [],
+      calories: []
+    });
     this.setState({ brochure: tempBrochure });
   }
 
@@ -72,17 +76,17 @@ class List extends Component {
     const brochure = this.state.brochure.map((item, index) => {
       console.log(item);
       return (
-        <tr key={index}>
+        <tr key={item.dow}>
           <td>{item.dow}</td>
-          <td>{item.food}</td>
+          <td><ul>{item.food.map(food => {return(<li>{food}</li>)})}</ul></td>
           <td>{" "} - {" "}</td>
-          <td>{item.calories}</td>
+          <td><ul>{item.calories.map(calories => {return(<li>{calories}</li>)})}</ul></td>
           <td>
             <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
               onClick={() => this.replaceModalItem(index)}>Edit</button> {" "}
             <button className="btn btn-danger" onClick={() => this.deleteItem(index)}>Clear</button>
           </td>
-          <td>Total Calories: {}</td>
+          <td>Total calories: {}</td>
         </tr>
       )
     });

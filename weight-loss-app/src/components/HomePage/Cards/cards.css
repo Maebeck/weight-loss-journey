@@ -1,0 +1,4 @@
+.card-home {
+    justify-content: flex-start flex-end center space-evenly;
+    background-image: '../../../../public/images/homepageBackground.jpeg';
+}

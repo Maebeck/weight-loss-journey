@@ -3,50 +3,50 @@
     "id": 1,
     "dow":"Monday",
     "food":" ",
-    "calories": " "
+    "calories": 0
 
     },
     {
         "id": 2,
         "dow":"Tuesday",
         "food":" ",
-        "calories": " "
+        "calories": 0
     
         },
         {
             "id": 3,
             "dow":"Wednesday",
             "food":" ",
-            "calories": " "
+            "calories": 0
         
             },
             {
                 "id": 4,
                 "dow":"Thursday",
                 "food":" ",
-                "calories": " "
+                "calories": 0
             
                 },
                 {
                     "id": 5,
                     "dow":"Friday",
                     "food":" ",
-                    "calories": " "
+                    "calories": 0
                 
                     },
                     {
                         "id": 6,
                         "dow":"Saturday",
                         "food":" ",
-                        "calories": " "
+                        "calories": 0
                     
                         },
                         {
                             "id": 7,
                             "dow":"Sunday",
                             "food":" ",
-                            "calories": " "
+                            "calories": 0
                         
-                            },
+                            }
 
 ]

@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const journalSchema = new Schema ({
-    meal: { type: String, required: true},
-    calories: { type: Number, required: true},
-    // date: { type: Date, required: true},
+    // _id: Number,
+    meals: { type: String, required: true},
+    totalcalories: { type: Number, required: true},
+    dow: { type: String, required: true}
 }, {
     timestamps: true,
 });

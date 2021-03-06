@@ -11,9 +11,9 @@ import AuthNav from './auth-nav'
             <Navbar.Toggle aria-controls='basic-navbar-nav' />
             <Navbar.Collapse className='justify-content-end' id='basic-navbar-nav'>
                 <Nav>
-                    <Nav.Link className ="navlinks" href='/recipes'>Recipes</Nav.Link>
+                    <Nav.Link className ="navlinks" href='/MealPlan'>Recipes</Nav.Link>
                     <Nav.Link className ="navlinks" href='/journal'>Food Journal</Nav.Link>
-                    <Nav.Link className = "navlinks" href='/dashboard'>Dashboard</Nav.Link>
+                    <Nav.Link className = "navlinks" href='/Dashboard'>Dashboard</Nav.Link>
                 </Nav>
               <AuthNav />
             </Navbar.Collapse>
