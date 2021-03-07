@@ -2,12 +2,17 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const userSchema= new Schema ({
+const usersSchema= new Schema ({
     username: {
         type: String,
         unique: true,
         trim: true,
         minlength: 4
+    },
+    email: {
+        type: String,
+        unique: true,
+        trim: true
     },
     weight: {
         type: Number,
@@ -21,24 +26,18 @@ const userSchema= new Schema ({
         minlength: 2,
         maxlenght: 3
     },
-    password: {
-        type: String,
-        minlenght: 6,
-        maxlength: 12,
-        trim: true
-    },
     dailyCals: {
         type: Number,
         required: false,
         minlength: 3, 
         maxlength: 4
     },
-    JournalInfo: [{ type: Schema.Types.ObjectId, ref: 'Journal' }],
-    MealPlan: [{type: Schema.Types.ObjectId, ref: 'MealPlan'}]
+    JournalInfo: [{ type: Schema.Types.ObjectId, email, refpath: '../journalmodel' }],
+    MealPlan: [{type: Schema.Types.ObjectId, email, refpath: '../mealplanmodel'}]
     }, {
         timestaps: true,
         
     });
 
-    const User = mongoose.model('User', userSchema);
-    module.exports = User;
+    const Users = mongoose.model('User', usersSchema);
+    module.exports = Users;

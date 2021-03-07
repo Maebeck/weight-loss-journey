@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
 const journalSchema = new Schema ({
     // _id: Number,
+    UserID: email,
     meals: [],
     calories: [],
     totalCal: {type: Number},
