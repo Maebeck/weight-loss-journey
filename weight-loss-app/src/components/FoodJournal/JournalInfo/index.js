@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Modal from '../JournalModals';
+import axios from 'axios';
 
 class List extends Component {
   constructor(props) {
@@ -67,7 +68,6 @@ class List extends Component {
     });
     this.setState({ brochure: tempBrochure });
   }
-
   // totalCal() {
     
   // }
@@ -83,7 +83,7 @@ class List extends Component {
           <td><ul>{item.calories.map(calories => {return(<li>{calories}</li>)})}</ul></td>
           <td>
             <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-              onClick={() => this.replaceModalItem(index)}>Edit</button> {" "}
+              onClick={() => this.replaceModalItem(index)}>Edit</button> {" "}     
             <button className="btn btn-danger" onClick={() => this.deleteItem(index)}>Clear</button>
           </td>
           <td>Total calories: {}</td>

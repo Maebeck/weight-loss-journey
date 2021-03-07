@@ -4,9 +4,10 @@ const Schema = mongoose.Schema;
 
 const journalSchema = new Schema ({
     // _id: Number,
-    meals: { type: String, required: true},
-    totalcalories: { type: Number, required: true},
-    dow: { type: String, required: true}
+    meals: [],
+    calories: [],
+    totalCal: {type: Number},
+    date: {}
 }, {
     timestamps: true,
 });

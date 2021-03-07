@@ -9,21 +9,22 @@ class Modal extends Component {
             foodInput: '',
             food: [],
             calories: [],
-            caloriesInput: ''
+            caloriesInput: '',
+            date: new Date()
         }
     }
 
     savetoDatabase(){
         const journal = {
             meals: this.state.food,
-            totalcalories: this.state.calories,
-            dow: this.state.dow
+            calories: this.state.calories,
+            dow: this.state.dow,
+            date: this.state.date
         }
         console.log(journal);
-        axios.post('http://localhost:3001/journal/add', journal)
-        .then(res => console.log(res.data));
-
-        window.locaion = '/journal';
+        axios.post('http://localhost:3001/journal/add', journal )
+        .then(res => console.log(res));
+        // window.location = '/journal';
     }
 
     componentWillReceiveProps(nextProps) {
@@ -41,10 +42,13 @@ class Modal extends Component {
         this.setState({ caloriesInput: e.target.value });
     }
 
-    handleSave() {
+    handleSave(e) {
+        console.log(e);
+        e.preventDefault();
         const item = this.state;
         this.props.saveModalDetails(item)
         this.savetoDatabase();
+        
     }
     addFood = (e) => {
         e.preventDefault()
@@ -52,8 +56,8 @@ class Modal extends Component {
             const foodinfo = {
                 foodInput: '',
                 caloriesInput: '',
-                food:  [...prevState.foodInput, prevState.foodInput],
-                calories: [prevState.caloriesInput]
+                food:  [...prevState.food, prevState.foodInput],
+                calories: [...prevState.calories, prevState.caloriesInput]
             }
             console.log(prevState)
             console.log(foodinfo)
@@ -69,6 +73,8 @@ class Modal extends Component {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-food" id="exampleModalLabel">Edit Daily Food</h5>
+                            
+                            <h6>Please list all items and calories before saving!</h6>
                             <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -78,11 +84,13 @@ class Modal extends Component {
                             <ul>{this.state.calories.map(calories => {return(<li>Calories: {calories}</li>)})}</ul>
                             <p><span className="modal-lable">Food:  </span><input value={this.state.foodInput} onChange={(e) => this.foodHandler(e)} /></p>
                             <p><span className="modal-lable">Calories:  </span><input value={this.state.caloriesInput} onChange={(e) => this.caloriesHandler(e)} /></p>
-                            <button onClick={this.addFood}>Test</button>
+                           
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => { this.handleSave() }}>Save changes</button>
+                            <button type="button" className="btn btn-primary" onClick={this.addFood}>Add To List</button>
+                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={(e) => { this.handleSave(e) }}>Save changes</button>
+                          
                         </div>
                     </div>
                 </div>

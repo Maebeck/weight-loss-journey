@@ -8,14 +8,16 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
     const meals =req.body.meals;
+    const calories = req.body.calories;
     const totalcalories = req.body.totalcalories;
-    const dow = req.body.dow;
+    const date = req.body.date;
 
 
 const newJournal = new Journal({
     meals,
+    calories,
     totalcalories,
-    dow,
+    date
 });
 
 newJournal.save()
@@ -24,15 +26,13 @@ newJournal.save()
 });
 
 router.route('/:id').delete((req, res) => {
-    Journal.findById(req.params.id).then(journal => res.json(journal)).catch(err => res.status(400).json('Error: ' + err));
+    Journal.findById(req.params.date).then(journal => res.json(journal)).catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/update/:id').post((req, res) => {
-    Journal.findById(req.params.id).then(journal => {
+    Journal.findByIdandUpdate(req.params.date).then(journal => {
         journal.meals = req.body.meals;
-        journal.totalcalories= req.body.totalalories;
-        journal.dow =req.body.dow;
-
+        journal.calories= req.body.calories;
         journal.save().then(() => res.json('Journal updated!')).catch(err => res.status(400).json('Error: ' + err));
     })
     .catch(err => res.status(400).json('Error: ' + err));
