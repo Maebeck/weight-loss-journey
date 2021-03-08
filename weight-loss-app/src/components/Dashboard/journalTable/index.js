@@ -19,7 +19,7 @@ export default class journalTable extends React.Component {
             <tr>
                 {this.state.journalEntries.map(journal => <td>{journal.meals} {journal.calories} {journal.date}</td>)}
             </tr>
-        </main>
+</main>
     )
 }
 }

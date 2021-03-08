@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 class Modal extends Component {
     constructor(props) {
         super(props);
         this.handleSave = this.handleSave.bind(this);
         this.state = {
+            
             foodInput: '',
             food: [],
             calories: [],

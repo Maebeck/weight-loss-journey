@@ -15,7 +15,7 @@ code {
 
 
 .MealPlan{
-  background-image: url(./images/mealplanbackground.jpg) no-repeat;
+  background-image: url('./images/mealplanbackground.jpg');
   position: fixed;
   top:0;
   left:0;
@@ -26,8 +26,8 @@ code {
 }
 
 .home {
-  background-image: url(./images/homepageBackground.jpeg) no-repeat;
-  position: fixed;
+  background-image: url('./images/homepageBackground.jpeg')
+  /* position: fixed;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 100%; */
 }

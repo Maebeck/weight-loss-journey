@@ -32,8 +32,8 @@ const usersSchema= new Schema ({
         minlength: 3, 
         maxlength: 4
     },
-    JournalInfo: [{ type: Schema.Types.ObjectId, email, refpath: '../journalmodel' }],
-    MealPlan: [{type: Schema.Types.ObjectId, email, refpath: '../mealplanmodel'}]
+    JournalInfo: [{ type: Schema.Types.ObjectId, refpath: '../journalmodel' }],
+    MealPlan: [{type: Schema.Types.ObjectId, refpath: '../mealplanmodel'}]
     }, {
         timestaps: true,
         

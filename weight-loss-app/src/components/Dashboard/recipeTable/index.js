@@ -17,7 +17,9 @@ export default class recipeTable extends React.Component {
     return (
         <main>
             <tr>
-                {this.state.recipes.map(recipe => <td>{recipe.title} {recipe.recipelink}</td>)}
+              <h1>your saved recipes!</h1>  
+            <td><ul>{this.state.recipes.map(recipe => {return(<li>{recipe.title}</li>)})}</ul></td>
+          <td><ul>{this.state.recipes.map(recipe => {return(<li>{recipe.recipelink}</li>)})}</ul></td>
             </tr>
         </main>
     )
