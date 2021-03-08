@@ -2,7 +2,6 @@ const router = require ('express').Router();
 const path = require ('path');
 const apiRoutes = require ('./apiRoutes');
 const journalRoutes = require('./journalRoutes');
-const mongo = require('mongodb');
 const mealplanRoutes = require('./mealplanRoutes');
 
 const url = 'mongodb://localhost:3001/test';
@@ -16,13 +15,13 @@ router.use('/mealplan', mealplanRoutes);
 // });
 
 router.get('/journal', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../weight-loss-app/src/pages/JournalPage.js'))
+    res.sendFile(path.join(__dirname, '../weight-loss-app/public/index.html'))
 });
 router.get('/mealplan', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../weight-loss-app/src/pages/MealPlan.js'))
+    res.sendFile(path.join(__dirname, '../weight-loss-app/public/index.html'))
 });
 router.get('/user', (req, res) => {
-    res.sendFile(path.join(__dirnam, '../../weight-loss-app/src/pages/UserPage.js'))
+    res.sendFile(path.join(__dirnam, '../weight-loss-app/public/index.html'))
 });
 
 module.exports = router;

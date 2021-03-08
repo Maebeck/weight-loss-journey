@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const journalSchema = new Schema ({
     // _id: Number,
-    UserID: email,
+    UserID: '',
     meals: [],
     calories: [],
     totalCal: {type: Number},

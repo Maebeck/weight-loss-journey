@@ -5,12 +5,12 @@ import './home.css';
 
 function Home () {
     return (
-        <>
-        <div class='homebackground'>
+   
+        <div class='home'>
         <Jumbotron />
         <Cards />
         </div>
-        </>
+       
     )
     }
 

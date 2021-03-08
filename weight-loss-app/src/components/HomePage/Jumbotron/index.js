@@ -1,9 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import './jumbo.css';
 function Jumbotron() {
   return (
-    <div className="jumbotron jumbohome">
+    <div className="jumbotron">
       <h1 className="display-4 text-align-center">
         Welcome to the start of your weight loss journey!
       </h1>

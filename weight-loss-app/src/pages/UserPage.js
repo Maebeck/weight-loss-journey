@@ -6,7 +6,7 @@ function Dashboard() {
     const { user } = useAuth0();
     const {name, picture, email } = user;
     return (
-        <div>
+        <div className ="Dashboard">
             <div>
                 <div>
                 <img src={picture} alt='Profile'/>

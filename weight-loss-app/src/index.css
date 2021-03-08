@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.MealPlan{
+  background-image: url(./images/mealplanbackground.jpg) no-repeat;
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.home {
+  background-image: url(./images/homepageBackground.jpeg) no-repeat;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
 }
