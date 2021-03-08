@@ -1,4 +1,45 @@
 .card-home {
     /* justify-content: flex-start flex-end center space-evenly; */
-   
+}
+
+li {
+    list-style: none;
+    padding-top: 35px;
+}
+
+li::before {
+    content: '\2713';
+}
+
+.cardButton {
+}
+
+.cardDiv {
+object-fit: cover;
+ padding-left: 35px;
+ padding-right: 35px;
+
+}
+
+.cardTitle {
+    text-align: center;
+}
+
+.cardStyle {
+    opacity: .7;
+    ;
+}
+.card-body, .card-title, .cardButton {
+    opacity: 1 !important;
+}
+.card {
+    background-color: rgba(128, 128, 128, 0.8)!important;
+    color: antiquewhite !important;
+    
+}
+
+.cardButton {
+    background-color: rgb(61, 61, 61) !important;
+    border-color: rgb(61, 61, 61) !important;
+    color: antiquewhite !important;
 }

@@ -1,0 +1,11 @@
+.jumbo {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    background-color: rgba(128, 128, 128, 0.5)!important;
+    color: antiquewhite !important;
+}
+
+.jumboText {
+    text-align: center !important;
+}

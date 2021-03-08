@@ -39,10 +39,11 @@
   }
 }
 
-nav a.nav-link {
-  font-weight: 500;
+.navlinks {
+  font-weight: 900;
   letter-spacing: 0.0375rem;
   cursor: pointer;
+  color: antiquewhite !important;
 }
 
 nav ul li {
