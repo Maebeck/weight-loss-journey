@@ -14,6 +14,7 @@ import './navbar.css';
                     <Nav.Link className ="navlinks" href='/MealPlan'>Meal Plan</Nav.Link>
                     <Nav.Link className ="navlinks" href='/journal'>Food Journal</Nav.Link>
                     <Nav.Link className = "navlinks" href='/Dashboard'>Dashboard</Nav.Link>
+                    <Nav.Link className = "navlinks" href='/'>Home</Nav.Link>
                 </Nav>
               <AuthNav />
             </Navbar.Collapse>

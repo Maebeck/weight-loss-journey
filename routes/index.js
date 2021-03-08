@@ -1,12 +1,12 @@
 const router = require ('express').Router();
 const path = require ('path');
-const apiRoutes = require ('./apiRoutes');
+
 const journalRoutes = require('./journalRoutes');
 const mealplanRoutes = require('./mealplanRoutes');
 
 const url = 'mongodb://localhost:3001/test';
 
-router.use('/api', apiRoutes);
+
 router.use('/journal', journalRoutes);
 router.use('/mealplan', mealplanRoutes);
 

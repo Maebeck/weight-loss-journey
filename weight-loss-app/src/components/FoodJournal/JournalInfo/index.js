@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Modal from '../JournalModals';
-import axios from 'axios';
 
 class List extends Component {
   constructor(props) {
