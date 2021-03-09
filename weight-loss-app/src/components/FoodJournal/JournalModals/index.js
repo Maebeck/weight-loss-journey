@@ -24,7 +24,7 @@ class Modal extends Component {
             date: this.state.date
         }
         console.log(journal);
-        axios.post('http://localhost:3001/journal/add', journal )
+        axios.post(process.env.WEIGHT_LOSS_URI + '/journal/add', journal )
         .then(res => console.log(res));
         // window.location = '/journal';
     }
