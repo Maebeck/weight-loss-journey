@@ -11,10 +11,10 @@ export default function Meal({ meal }) {
       recipelink: meal.sourceUrl,
     }
     console.log(recipe);
-    axios.post('http://localhost:3001/mealplan/add', recipe)
+    axios.post('mealplan/add', recipe)
     .then(res => console.log(res))
     }
-  
+
 
   useEffect(() => {
     fetch(
