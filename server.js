@@ -9,7 +9,6 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3001;
 const routes = require('./routes');
-app.use(express.static('weight-loss-app/public'));
 app.use(cors());
 app.use(express.json());
 
@@ -26,14 +25,14 @@ mongoose.connect(process.env.WEIGHT_LOSS_URI || "mongodb://localhost/WEIGHT_LOSS
 //     app.use(express.static("weight-loss-app/build"));
 //   };
 
-app.use(routes);
+
 
 if(process.env.NODE_ENV === "production") {
     // Set static folder
     app.use(express.static("weight-loss-app/build"))
-    app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "weight-loss-app", "build", "index.html")))
+    // app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "weight-loss-app", "build", "index.html")))
   }
-
+app.use(routes);
 
 
 app.listen(port, () => {
