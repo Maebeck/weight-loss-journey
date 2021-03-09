@@ -25,7 +25,7 @@ mongoose.connect(process.env.WEIGHT_LOSS_URI || "mongodb://localhost/WEIGHT_LOSS
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("weight-loss-app/build"));
     app.use(function(req, res) {
-        res.sendFile(path.join(__dirname, "../weight-loss-app/build/index.html"));
+        res.sendFile(path.join(__dirname, "weight-loss-app/build/index.html"));
       });
   } else app.get('*',  (req, res) => {
     res.sendFile(path.join(__dirname+'weight-loss-app/public/index.html'))
