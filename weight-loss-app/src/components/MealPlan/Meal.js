@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import './mealplan.css';
 
 export default function Meal({ meal }) {
   const [imageUrl, setImageUrl] = useState("");
@@ -30,16 +31,17 @@ export default function Meal({ meal }) {
 
   
   return (
-    <article>
-      <h1>{meal.title}</h1>
-      <img src={imageUrl} alt="recipe" />
-      <ul className="instructions">
-        <li>Preparation time: {meal.readyInMinutes} minutes</li>
-        <li>Number of servings: {meal.servings}</li>
-      </ul>
-
-      <a href={meal.sourceUrl}>Go to Recipe</a>
-      <button className = 'btn btn-primary' onClick={saveRecipe}>Save this Recipe!</button>
-    </article>
-  );
+    
+      <article>
+        <h1 className='mealTitle'>{meal.title}</h1>
+        <img src={imageUrl} className='recipeimg' alt="recipe" />
+        <ul className="instructions">
+          <li>Preparation time: {meal.readyInMinutes} minutes</li>
+          <li>Number of servings: {meal.servings}</li>
+        </ul>
+  
+        <button className = 'btn btn-primary recipebtn' href={meal.sourceUrl}>Go to Recipe</button>
+        <button className='btn btn-primary recipebtn' onClick={saveRecipe}>Save This Recipe!</button>
+      </article>
+    );
   }

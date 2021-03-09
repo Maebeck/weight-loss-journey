@@ -1,0 +1,29 @@
+.recipeimg {
+    max-width: 250px;
+    max-height: 250px;
+    margin-bottom: 1rem;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.recipetitle {
+    font-size: 20px;
+}
+
+.instructions {
+    text-align: left;
+    background-color: antiquewhite;
+    margin-right: 250px;
+    margin-bottom: 30px;
+}
+
+article {
+columns: 3;
+}
+
+.mealTitle {
+    font-size: 25px;
+    align-items: center;
+    margin-top: 50px;
+}

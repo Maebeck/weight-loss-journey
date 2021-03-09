@@ -1,5 +1,6 @@
 import React from "react";
 import Meal from "./Meal";
+import './meallist.css';
 
 export default function MealList({ mealData }) {
   const nutrients = mealData.nutrients;
