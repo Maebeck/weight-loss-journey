@@ -7,7 +7,7 @@ export default class recipeTable extends React.Component {
         recipes: []
     } 
     componentDidMount(){
-        axios.get('http://localhost:3001/mealplan')
+        axios.get(process.env.WEIGHT_LOSS_URI + '/mealplan')
         .then(res => {
             this.setState({recipes: res.data});
             console.log(res);

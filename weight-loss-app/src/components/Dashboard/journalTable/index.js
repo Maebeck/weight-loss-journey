@@ -6,7 +6,7 @@ export default class journalTable extends React.Component {
         journalEntries: []
     } 
     componentDidMount(){
-        axios.get('http://localhost:3001/journal')
+        axios.get(process.env.WEIGHT_LOSS_URI + '/journal')
         .then(res => {
             this.setState({journalEntries: res.data});
             console.log(res);
