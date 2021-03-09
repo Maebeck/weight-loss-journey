@@ -85,7 +85,7 @@ class List extends Component {
               onClick={() => this.replaceModalItem(index)}>Edit</button> {" "}     
             <button className="btn btn-danger" onClick={() => this.deleteItem(index)}>Clear</button>
           </td>
-          <td>Total calories: {}</td>
+          {/* <td>Total calories: {}</td> */}
         </tr>
       )
     });

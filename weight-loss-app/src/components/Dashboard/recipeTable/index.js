@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import './recipeTable.css'
 
 export default class recipeTable extends React.Component {
     state={
@@ -16,8 +17,8 @@ export default class recipeTable extends React.Component {
  
     return (
         <main>
-            <tr>
-              <h1>your saved recipes!</h1>  
+            <h1 className='recipetableTitle'>your saved recipes!</h1> 
+            <tr className='recipeTableline'>   
             <td><ul>{this.state.recipes.map(recipe => {return(<li>{recipe.title}</li>)})}</ul></td>
           <td><ul>{this.state.recipes.map(recipe => {return(<li>{recipe.recipelink}</li>)})}</ul></td>
             </tr>
