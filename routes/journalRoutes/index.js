@@ -1,7 +1,7 @@
 const router = require('express').Router();
 let Journal = require('../../models/journalmodel');
 
-router.route('/journal').get((req, res) => {
+router.route('/').get((req, res) => {
     Journal.find().then(journal=> res.json(journal))
     .catch(err => res.status(400).json('Error: ' + err));
 });
