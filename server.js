@@ -25,13 +25,16 @@ mongoose.connect(process.env.WEIGHT_LOSS_URI || "mongodb://localhost/WEIGHT_LOSS
 // if (process.env.NODE_ENV === "production") {
 //     app.use(express.static("weight-loss-app/build"));
 //   };
+
+app.use(routes);
+
 if(process.env.NODE_ENV === "production") {
     // Set static folder
     app.use(express.static("weight-loss-app/build"))
     app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "weight-loss-app", "build", "index.html")))
   }
 
-app.use(routes);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
