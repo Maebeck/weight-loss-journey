@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const journalRoutes = require('./journalRoutes');
 const mealplanRoutes = require('./mealplanRoutes');
+const path = require('path');
 
 
 // const url = 'mongodb://localhost:3001/test';

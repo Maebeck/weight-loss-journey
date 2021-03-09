@@ -21,7 +21,7 @@ function App() {
           <Switch>
             <Route exact path = '/' component={Home} />
             <ProtectedRoute exact path = '/journal' component = {JournalPage} />
-            <ProtectedRoute exact path = '/Dashboard' component = {Dashboard} />
+            <ProtectedRoute exact path = '/dashboard' component = {Dashboard} />
             <ProtectedRoute exact path = '/mealplan' component = {MealPlan} />
           </Switch>
       {/* <Footer /> */}
