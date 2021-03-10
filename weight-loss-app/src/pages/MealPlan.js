@@ -23,8 +23,8 @@ function MealPage() {
 
   function handleChange(e) {
     setCalories(e.target.value);
-  }
-
+  };
+ 
   return (
     <div className="MealPage">
       <div className='recipeDiv'>
