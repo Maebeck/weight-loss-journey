@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const journalRoutes = require('./journalRoutes');
-// const mealplanRoutes = require('./mealplanRoutes');
+const mealplanRoutes = require('./mealplanRoutes');
 const path = require('path');
 
 
@@ -8,7 +8,7 @@ const path = require('path');
 
 
 router.use('/journal', journalRoutes);
-// router.use('/MealPlan', mealplanRoutes);
+router.use('/MealPlan', mealplanRoutes);
 
 
 // // router.get('/journal', (req, res) => {
@@ -23,4 +23,4 @@ router.use('/journal', journalRoutes);
 router.use(function(req, res) {
     res.sendFile(path.join(__dirname, "../weight-loss-app/build/index.html"));
   });
-// module.exports = router;
+module.exports = router;
