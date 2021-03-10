@@ -7,8 +7,8 @@ const path = require('path');
 // // const url = 'mongodb://localhost:3001/test';
 
 
-router.use('/journal', journalRoutes);
-router.use('/MealPlan', mealplanRoutes);
+router.use('/api/journal', journalRoutes);
+router.use('/api/MealPlan', mealplanRoutes);
 
 
 // // router.get('/journal', (req, res) => {

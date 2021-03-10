@@ -11,7 +11,7 @@ export default function Meal({ meal }) {
       recipelink: meal.sourceUrl,
     }
     console.log(recipe);
-    axios.post(process.env.WEIGHT_LOSS_URI + 'mealplan/add', recipe)
+    axios.post(process.env.WEIGHT_LOSS_URI + '/api/mealplan/add', recipe)
     .then(res => console.log(res))
     }
 

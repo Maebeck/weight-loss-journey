@@ -2,12 +2,13 @@ import axios from 'axios';
 import React from 'react';
 import './recipeTable.css'
 
+
 export default class recipeTable extends React.Component {
     state={
         recipes: []
     } 
     componentDidMount(){
-        axios.get(process.env.WEIGHT_LOSS_URI + '/mealplan')
+        axios.get('/api/mealplan')
         .then(res => {
             this.setState({recipes: res.data});
             console.log(res);
