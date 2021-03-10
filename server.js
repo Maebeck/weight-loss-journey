@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3001;
-const routes = require('./routes/index');
+const routes = require('./routes');
 app.use(cors());
 app.use(express.json());
 
@@ -32,7 +32,7 @@ if(process.env.NODE_ENV === "production") {
     app.use(express.static("weight-loss-app/build"))
     // app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "weight-loss-app", "build", "index.html")))
   }
-// app.use(routes);
+app.use(routes);
 
 
 app.listen(port, () => {
